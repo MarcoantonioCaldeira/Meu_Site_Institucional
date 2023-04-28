@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    color: white;
+    /* display: inline; */
+}
+
+#menu{
+    width: 100%;
+    height: 100px;
+    background-color: #0C0C0C;
+}
+
+#tamplate{
+    width: 100%;
+    height: 600px;
+    background-color: #0C0C0C;
+}
+
+#Info_Ocu{
+    width: 100%;
+    height: 650px;
+    background-color: #e2e2e2;
+}
+
+.Info_Ocu_di{
+    width: 650px;
+    float: right;
+    height: 650px;
+    background-color: #CECECE;
+}
+
+#Area_Solucoes{
+    width: 100%;
+    height: 680px;
+    background-color: red;
+}
+
+#Skills{
+    width: 100%;
+    height: 650px;
+    background-color: white;
+}
+
+#Contato{
+    width: 100%;
+    height: 650px;
+    background-color: bisque;
+}
+
+#rodape{
+    width: 100%;
+    height: 300px;
+    background-color: black;
+}
