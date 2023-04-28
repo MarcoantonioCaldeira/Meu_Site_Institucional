@@ -1,0 +1,54 @@
+@import url( "https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swapel");
+
+/* Configuração Padrao */
+#input{
+  background-color: #dad8d8;
+  padding: 0px 12px;
+  border: 1px solid;
+  margin: 20px;
+  font-family: 'Inter', sans-serif;
+  /* //display: block; */
+}
+
+
+.input_nome{
+    display: inline;
+    position: relative !important;
+    margin-left: 25%  !important;
+    width: 300px;
+    height: 40px;
+}
+
+.input_sobrenome{
+    display: inline;
+    position: relative !important;
+    margin-left: 2px  !important; 
+    width: 200px;
+    height: 40px;
+}
+
+.input_telefone{
+    display: inline;
+    position: relative;
+    margin-left: 25%  !important;
+    width: 150px;
+    height: 40px;
+}
+
+.input_email{
+    position: absolute;
+    width: 327px;
+    height: 40px;
+}
+
+#text_area{
+  display: block;
+  width: 562px;
+  height: 220px;
+  margin-top: 27px;
+  margin-left: 25%;
+  border: 1px solid #dad8d8;
+  background-color: #dad8d8;
+  box-shadow: 0 4px 8px 0 rgba(32, 32, 32, 0.2), 0 6px 20px 0 rgba(51, 51, 51, 0.19);
+  font-size: 16px;
+}

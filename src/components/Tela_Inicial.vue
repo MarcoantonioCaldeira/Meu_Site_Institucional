@@ -8,10 +8,14 @@
     </div>
 
     <div id="tamplate">
-      
+      <h1 class="h1_Sauda_Nome">Olá, me chamo <br>Marco Antonio!!!</h1>
+
+      <h4 class="h3_Intro">Sou Desenvolvedor Web Front-End. Atualmente<br> 
+      estou cursando Tecnologia em Sistemas para a <br>
+      internet no IFSP.   </h4>
     </div>
     <!-- Div que eu quero mudar -->
-    <div :id="Info_Ocu">
+    <div id="Info_Ocu">
         <h1 class="h1_ocupacao">Ocupação atual</h1>
 
         <div class="Info_Ocu_di">
@@ -34,17 +38,27 @@
 
     <div id="Contato">
 
+      <h1 class="h1_contato">Entre em contato</h1>
+
+      <div id="area_inputs">
+        <inputs />
+      </div>
+
+      <button class="btn_enviar">Enviar</button>
+
     </div>
     <rodape />
 </template>
 
 <script>
   import rodape from './rodape.vue'
+  import Inputs from './Inputs/Inputs.vue'
 
   export default {
     name: 'Tela_Inicial',
     components:{
-      rodape
+      rodape,
+      Inputs
     },
 
     data(){
