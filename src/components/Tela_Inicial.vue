@@ -1,22 +1,22 @@
 <template>
-    <div id="menu">
-      <ul>
-        <li>Inicio</li>
-        <li>Serviços</li>
-        <li>Meu contato</li>
-      </ul>
-    </div>
+   
+    <Menu />
 
     <div id="tamplate">
       <h1 class="h1_Sauda_Nome">Olá, me chamo <br>Marco Antonio!!!</h1>
 
       <h4 class="h3_Intro">Sou Desenvolvedor Web Front-End. Atualmente<br> 
-      estou cursando Tecnologia em Sistemas para a <br>
-      internet no IFSP.   </h4>
+      estou cursando Tecnologia em Sistemas para a
+      internet <br>no IFSP. Sou muito criativo e gosto de estar
+      sempre em constante <br>evolução, criando novas soluções para as pessoas</h4>
     </div>
     <!-- Div que eu quero mudar -->
     <div id="Info_Ocu">
         <h1 class="h1_ocupacao">Ocupação atual</h1>
+
+          <img class="icon_ocu"  src="../assets/img/icon_work.png" />
+          <h3 class="h3_cargo">Desenvolvedor<br>Front-End Pleno</h3>
+          <h3 class="h3_nome_empresa">Empresa: T.I Gestor Software</h3>
 
         <div class="Info_Ocu_di">
 
@@ -24,7 +24,7 @@
     </div>
 
     <div id="Area_Solucoes">
-
+      <h1 class="h1_servicos">Serviços e soluções</h1>
     </div>
 
     <div id="Skills">
@@ -51,6 +51,7 @@
 </template>
 
 <script>
+  import Menu from './Menu.vue'
   import rodape from './rodape.vue'
   import Inputs from './Inputs/Inputs.vue'
 
@@ -58,34 +59,53 @@
     name: 'Tela_Inicial',
     components:{
       rodape,
-      Inputs
+      Inputs,
+      Menu
     },
 
     data(){
       return{
-        scrollPosition: null 
+      
       }
     },
 
     methods:{
 
-        Alterar_Background: function(){
+        // Alterar_Background: function(){
           
-          var div_alterada = document.getElementById("#Info_Ocu");
-          var ponto_maximo = '50';
+        //   var div_alterada = document.getElementById("#aInfo_Ocu");
+        //   var ponto_maximo = '50';
 
-          window.addEventListener('scroll', function(){
+        //   window.addEventListener('scroll', function(){
 
-            if(window.scrollY > ponto_maximo){
+        //     if(window.scrollY > ponto_maximo){
 
-              div_alterada.classList.add('mudar_estilo');
-            }else{
-              div_alterada.classList.remove('mudar_estilo');
-            }
-          })
-        }
+        //       div_alterada.classList.add('mudar_estilo');
+        //     }else{
+        //       div_alterada.classList.remove('mudar_estilo');
+        //     }
+        //   })
+        // },
+
+        // topFunction(){
+
+        //   var mybutton = document.getElementsByClassName(li)
+
+        //   window.onscroll = function() {scrollFunction()};
+
+        //   function scrollFunction() {
+            
+        //     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        //       mybutton.style.display = "block";
+        //     } else {
+        //       mybutton.style.display = "none";
+        //     }
+        //   }
+
+        // }
     }
   }
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
