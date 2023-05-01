@@ -41,7 +41,7 @@
       <h1 class="h1_contato">Entre em contato</h1>
 
       <div id="area_inputs">
-        <inputs />
+        <Contato />
       </div>
 
       <button class="btn_enviar">Enviar</button>
@@ -53,13 +53,13 @@
 <script>
   import Menu from './Menu.vue'
   import rodape from './rodape.vue'
-  import Inputs from './Inputs/Inputs.vue'
+  import Contato from './Contato/Contato.vue'
 
   export default {
     name: 'Tela_Inicial',
     components:{
       rodape,
-      Inputs,
+      Contato,
       Menu
     },
 
