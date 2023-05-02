@@ -1,72 +1,30 @@
 <?php
+header('Content-Type: application/json');
 
-require_once('../vendor/autoload.php');
+// Obter os dados do formulário
+$nome = $_POST['nome'];
+$sobrenome = $_POST['sobrenome'];
+$email = $_POST['email'];
+$message = $_POST['mensagem'];
 
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
+// Validar os dados do formulário
+if (empty($nome) || empty($sobrenome) || empty($email) || empty($mensagem)) {
+  // Se algum dos campos estiver vazio, retorne uma mensagem de erro
+  echo json_encode(array('success' => false, 'message' => 'Por favor, preencha todos os campos.'));
+  exit;
+}
 
-define("HOST", "");
-define("PORT", );
-define("USER", "");
-define("PASS", "");
+// Configurar as informações do e-mail
+$to = 'caldeiran391@gmail.com';
+$subject = 'Nova mensagem do formulário de contato';
+$body = "Nome: $nome\n   Sobrenome: $sobrenome\n   E-mail: $email\n  Mensagem:\n$mensagem";
 
-
-function SendMessage(string $name, string $last_name, string $email, string $message){
-
-    $html = ReturnHTMLBody($name, $last_name, $email, $message);
-  
-    $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
-    try {
-        //Server settings
-        $mail->SMTPDebug = 0; // Enable verbose debug output
-        $mail->CharSet = 'UTF-8';
-        $mail->isSMTP();                                      // Set mailer to use SMTP
-        $mail->Host = HOST;  // Specify main and backup SMTP servers
-        $mail->SMTPAuth = true;                               // Enable SMTP authentication
-        $mail->Username = USER;                 // SMTP username
-        $mail->Password = PASS;                           // SMTP password
-        $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
-        $mail->Port = PORT;                                    // TCP port to connect to
-  
-        //Recipients
-        $mail->setFrom($email, $name); //
-        $mail->addAddress('caldeiran391@gmail.com', $subject);     // Add a recipient
-  
-        //Content
-        $mail->isHTML(true);// Set email format to HTML
-        $mail->Subject = $subject;
-        $mail->Body    = $html;
-        $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
-  
-        $mail->send();
-        return true;
-    } catch (Exception $e) {
-        echo 'ERROR: ', $mail->ErrorInfo;
-        return false;
-    }
-  }
-
-
-  function ReturnHTMLBody(string $name, string $last_name, string $email, string $message){
-
-    $dateTime = date("Y/m/d H:i:s");
-    $ipAddress = $_SERVER["REMOTE_ADDR"];
-    $browser = $_SERVER['HTTP_USER_AGENT'];
-  
-    $html =  "<div style='padding: 5px;'>".
-                "<h1 style='text-align: center; color: #212121; font-weight: 300'>Mail send by my website</h1>".
-                "<div style='border:1px solid #BDBDBD;'></div>".
-                "<p><span style='font-weight: bold;'>Full name: </span> {$name}</p>".
-                "<p><span style='font-weight: bold;'>Email: </span> {$last_name}</p>".
-                "<p><span style='font-weight: bold;'>Subject: </span> {$email}</p>".
-                "<p><span style='font-weight: bold;'>Date time: </span> {$dateTime}</p>".
-                "<p><span style='font-weight: bold;'>IP Address: </span> {$ipAddress}</p>".
-                "<p><span style='font-weight: bold;'>Browser: </span> {$browser}</p>".
-                "<p><span style='font-weight: bold;'>Message: </span> {$message}</p>".
-            "</div>";
-            
-    return $html;
-    
-  }
-
+// Enviar o e-mail
+if (mail($to, $subject, $body)) {
+  // Se o e-mail for enviado com sucesso, retorne uma mensagem de sucesso
+  echo json_encode(array('success' => true, 'message' => 'Mensagem enviada com sucesso!'));
+} else {
+  // Se ocorrer um erro ao enviar o e-mail, retorne uma mensagem de erro
+  echo json_encode(array('success' => false, 'message' => 'Ocorreu um erro ao enviar a mensagem. Por favor, tente novamente.'));
+}
 ?>
