@@ -65,5 +65,5 @@ export default{
 
 </script>
 
-<style src="./style_input.css">
+<style src="./style_input.scss"  lang="scss">
 </style>

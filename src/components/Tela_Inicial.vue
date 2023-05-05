@@ -109,5 +109,5 @@
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style src="./style.scss">
+<style src="./style.scss" lang="scss">
 </style>

@@ -42,4 +42,4 @@ export default {
 }
 
 </script>
-<style src="./style.scss"></style>
+<style src="./style.scss"  lang="scss"></style>
