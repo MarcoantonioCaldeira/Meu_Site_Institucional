@@ -8,7 +8,7 @@
       <h4 class="h3_Intro">Sou Desenvolvedor Web Front-End. Atualmente<br> 
       estou cursando Tecnologia em Sistemas para a
       internet <br>no IFSP. Sou muito criativo e gosto de estar
-      sempre em constante <br>evolução, criando novas soluções para as pessoas</h4>
+      sempre em  <br>constante evolução, criando novas soluções para as pessoas</h4>
     </div>
     <!-- Div que eu quero mudar -->
     <div id="Info_Ocu">
@@ -71,43 +71,43 @@
 
     methods:{
 
-        // Alterar_Background: function(){
+        Alterar_Background: function(){
           
-        //   var div_alterada = document.getElementById("#aInfo_Ocu");
-        //   var ponto_maximo = '50';
+          var div_alterada = document.getElementById("#aInfo_Ocu");
+          var ponto_maximo = '50';
 
-        //   window.addEventListener('scroll', function(){
+          window.addEventListener('scroll', function(){
 
-        //     if(window.scrollY > ponto_maximo){
+            if(window.scrollY > ponto_maximo){
 
-        //       div_alterada.classList.add('mudar_estilo');
-        //     }else{
-        //       div_alterada.classList.remove('mudar_estilo');
-        //     }
-        //   })
-        // },
+              div_alterada.classList.add('mudar_estilo');
+            }else{
+              div_alterada.classList.remove('mudar_estilo');
+            }
+          })
+        },
 
-        // topFunction(){
+        topFunction(){
 
-        //   var mybutton = document.getElementsByClassName(li)
+          var mybutton = document.getElementsByClassName(li)
 
-        //   window.onscroll = function() {scrollFunction()};
+          window.onscroll = function() {scrollFunction()};
 
-        //   function scrollFunction() {
+          function scrollFunction() {
             
-        //     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        //       mybutton.style.display = "block";
-        //     } else {
-        //       mybutton.style.display = "none";
-        //     }
-        //   }
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+              mybutton.style.display = "block";
+            } else {
+              mybutton.style.display = "none";
+            }
+          }
 
-        // }
+        }
     }
   }
 
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style src="./style.css">
+<style src="./style.scss">
 </style>
