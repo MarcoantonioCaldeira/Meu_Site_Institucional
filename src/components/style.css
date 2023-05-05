@@ -36,14 +36,14 @@ a{
 .img_linkedin{
     position: absolute;
     left: 86%;
-    padding-top: 22px;
+    padding-top: 35px;
     width: 3%;
 }
 
 .img_github{
     position: absolute;
     left: 92%;
-    padding-top: 22px;
+    padding-top: 35px;
     width: 3%;
 }
 
@@ -105,7 +105,11 @@ a{
     color: #B1B1B1;
     font-family: 'Inter', sans-serif;
     font-size: 22px;
-    margin-left: 50px;
+    position: absolute;
+    margin-top: 25%;
+    margin-left: -20%;
+    display: inline-block;
+    /* margin-left: 50px; */
 }
 
 .icon_ocu{
@@ -116,9 +120,9 @@ a{
 
 .Info_Ocu_di{
     width: 650px;
-    margin-left: 699px;
-    margin-top: -355px;
-    display: inline-block;
+    /* margin-left: 699px; */
+    /* margin-top: -27%; */
+    float: right;
     height: 650px;
     background-color: #CECECE;
 }
@@ -176,23 +180,9 @@ a{
     color: #dad8d8;
     position: absolute;
     font-size: 40px;
-    margin-left: 33%;
+    margin-left: 35%;
     margin-top: 10%;
     font-family: 'Inter', sans-serif;
-}
-
-.btn_enviar{
-    position: absolute;
-    background-color:black;
-    border: none;
-    margin-top: 52%;
-    margin-left: 40%;
-    color: #dad8d8;
-    padding: 16px 72px;
-    font-family: 'Inter', sans-serif;
-    text-decoration: none;
-    /* margin: 4px 2px; */
-    cursor: pointer;
 }
 
 #rodape{

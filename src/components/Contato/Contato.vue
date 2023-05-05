@@ -1,14 +1,30 @@
 <template>
-    <input type="text" id="input" class="input_nome"   v-model="form_Data.nome"  placeholder="Seu nome">
-    <input type="text" id="input" class="input_sobrenome" v-model="form_Data.sobrenome" placeholder="Sobrenome">
-    <br><input type="text" id="input" class="input_telefone" v-model="form_Data.telefone"  placeholder="telefone">
-    <input type="text" id="input" class="input_email"  v-model="form_Data.assunto" placeholder="E-mail">
-    <textarea id="text_area" v-model="form_Data.assunto" placeholder="Assunto">
 
-    </textarea>
+    <form ref="form" @submit.prevent="enviaMesangem">
+
+        <input type="text" id="input" class="input_nome"   name = "nome" placeholder="Seu nome">
+
+        <input type="text" id="input" class="input_sobrenome" name = "sobrenome" placeholder="Sobrenome">
+
+        <br><input type="text" id="input" class="input_telefone" name = "telefone"  placeholder="telefone">
+
+        <input type="text" id="input" class="input_email"  name = "email" placeholder="E-mail">
+
+        <textarea id="text_area" name="message" placeholder="Assunto">
+
+        
+        </textarea>
+       
+        <button  type="submit" class="btn_enviar">Enviar</button>
+    </form>
+
 </template>
 
 <script>
+import emailjs from '@emailjs/browser';
+
+
+
 export default{
     name: 'Contato',
     data(){
@@ -18,16 +34,36 @@ export default{
                 sobrenome: "",
                 email: "",
                 telefone: null,
-                assunto: ""
-            }
+                message: "",
+                msg: null
+            },
         }
     },
+
+
     methods:{
-            
+
+        enviaMesangem(){
+
+
+            // const tamplateParams = {
+            //     from_name: nome,
+            //     message: message,
+            //     email: email
+            // }
+
+            emailjs.sendForm('service_qrv1zon', 'template_7z9vi38', this.$refs.form, 'ni7t20CXVt0i1byAi')
+
+            .then((result) => {
+                console.log('Email enviado com sucesso!', result.text);
+            }, (error) => {
+                console.log('Falha ao enviar email', error.text);
+            });
+        }
     }
 }
 
-
 </script>
+
 <style src="./style_input.css">
 </style>

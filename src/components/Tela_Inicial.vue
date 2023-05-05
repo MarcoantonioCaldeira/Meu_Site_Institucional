@@ -16,7 +16,9 @@
 
           <img class="icon_ocu"  src="../assets/img/icon_work.png" />
           <h3 class="h3_cargo">Desenvolvedor<br>Front-End Pleno</h3>
+        
           <h3 class="h3_nome_empresa">Empresa: T.I Gestor Software</h3>
+          
 
         <div class="Info_Ocu_di">
 
@@ -43,8 +45,6 @@
       <div id="area_inputs">
         <Contato />
       </div>
-
-      <button class="btn_enviar">Enviar</button>
 
     </div>
     <rodape />

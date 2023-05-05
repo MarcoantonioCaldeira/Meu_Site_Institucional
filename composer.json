@@ -1,6 +1,7 @@
 {
     "require": {
-        "laravel/ui": "*",
-        "phpmailer/phpmailer": "^6.8"
+        "phpmailer/phpmailer": "^6.5"
     }
 }
+
+
