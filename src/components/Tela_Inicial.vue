@@ -1,7 +1,7 @@
 <template>
    
     <Menu />
-
+  
     <div id="tamplate">
       <h1 class="h1_Sauda_Nome">Olá, me chamo <br>Marco Antonio!!!</h1>
 
@@ -27,6 +27,30 @@
 
     <div id="Area_Solucoes">
       <h1 class="h1_servicos">Serviços e soluções</h1>
+
+      <div class="Area_img_solucoes">
+      
+        <div>
+          <img  class="img_criacao_sites"  src="../assets/img/img_sites.png"  v-on:mouseover="exibirMensagem" v-on:mouseout="Limparmensagem"/>
+          <p>{{ mensagem.msg_site }}</p>
+          <!-- <h4>Criação de Sites</h4>-->
+        </div>
+       
+        <div>
+          <img  class="img_criacao_loja"  src="../assets/img/e-commerce.png" v-on:mouseover="exibirMensagem" v-on:mouseout="Limparmensagem"/>
+          <p>{{  mensagem.msg_loja }}</p>
+        <!-- <h4>Criação de Lojas virtuais</h4> -->
+        </div>
+        
+        <img  class="img_criacao_sistemas"  src="../assets/img/sistema-web.png" />
+        <!-- <h4>Criação de Sistemas Web</h4> -->
+        <img  class="img_prototipo"  src="../assets/img/prototipagem.png" />
+        <!-- <h4>Prototipagem</h4>  -->
+      </div>
+      <!-- <ul>
+        <li><a class="btn_saiba_mais" :key="link_btn.id" v-click="$emit('handleClick') >{{ link_btn.text }}</a></li>
+      </ul> -->
+
     </div>
 
     <div id="Skills">
@@ -54,6 +78,8 @@
   import Menu from './Menu.vue'
   import rodape from './rodape.vue'
   import Contato from './Contato/Contato.vue'
+// import { createElement } from 'react/cjs/react.production.min'
+
 
   export default {
     name: 'Tela_Inicial',
@@ -65,27 +91,39 @@
 
     data(){
       return{
-      
+        mensagem:[
+          {msg_site: ''},
+          {msg_loja: ''}
+        ],
+        mes: null,
+        imagens:[
+          { caminho: '../assets/img/img_sites.png', exibirBalao: false, textoBalao: 'Criação de Sites' },
+          { caminho: '../assets/img/e-commerce.png', exibirBalao: false, textoBalao: 'Criação de Lojas Virtuais' },
+          { caminho: '../assets/img/sistema-web.png', exibirBalao: false, textoBalao: 'Criação de Sistemas Web' },
+          { caminho: '../assets/img/prototipagem.png', exibirBalao: false, textoBalao: 'Prototipagem' },
+        ]
       }
     },
 
+
+
     methods:{
 
-        Alterar_Background: function(){
+        // Alterar_Background: function(){
           
-          var div_alterada = document.getElementById("#aInfo_Ocu");
-          var ponto_maximo = '50';
+        //   var div_alterada = document.getElementById("#aInfo_Ocu");
+        //   var ponto_maximo = '50';
 
-          window.addEventListener('scroll', function(){
+        //   window.addEventListener('scroll', function(){
 
-            if(window.scrollY > ponto_maximo){
+        //     if(window.scrollY > ponto_maximo){
 
-              div_alterada.classList.add('mudar_estilo');
-            }else{
-              div_alterada.classList.remove('mudar_estilo');
-            }
-          })
-        },
+        //       div_alterada.classList.add('mudar_estilo');
+        //     }else{
+        //       div_alterada.classList.remove('mudar_estilo');
+        //     }
+        //   })
+        // },
 
         topFunction(){
 
@@ -102,7 +140,19 @@
             }
           }
 
+        },
+
+
+        exibirMensagem(){
+          this.mensagem.msg_site = "Criação de Sites"
+          this.mensagem.msg_loja = "Criação de lojas Virtuais"
+        },
+
+        Limparmensagem(){
+          this.mensagem = ''
         }
+      
+      
     }
   }
 

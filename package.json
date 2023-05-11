@@ -14,7 +14,8 @@
     "scss": "^0.2.4",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3",
-    "vue-scroll-behavior": "^0.3.0"
+    "vue-scroll-behavior": "^0.3.0",
+    "vuetify": "^3.2.2"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",

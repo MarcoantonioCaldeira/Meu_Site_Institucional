@@ -1,6 +1,9 @@
 <template>
 
      <div id="menu">
+      <div id="area_idioma">
+
+      </div>
       <a target="_blank" href="https://www.linkedin.com/in/marco-antonio-caldeira-97548616a/"><img class="img_linkedin"  src="../assets/img/linkedin.png" /></a>  
       <a target="_blank" href="https://github.com/MarcoantonioCaldeira"><img class="img_github"  src="../assets/img/github.png" /></a>
       <ul>

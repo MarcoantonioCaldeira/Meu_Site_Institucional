@@ -1,15 +1,15 @@
 <template>
   <div class="message-container">
-        <!-- <p>{{ msg }}</p> -->
+        <p>{{ msg }}</p>
     </div>
 </template>
 
 <script>
 export default{
     name: 'Message',
-    // props: {
-    //     msg: String
-    // }
+    props: {
+        msg: String
+    }
 }
 
 </script>
