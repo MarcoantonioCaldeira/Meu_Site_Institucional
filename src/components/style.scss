@@ -152,10 +152,72 @@ a{
     font-family: 'Inter', sans-serif;
 }
 
-.img_criacao_sites{width: 13%;margin-left: 7%;}
-.img_criacao_loja{width: 8%; margin-left: 12%;}
-.img_criacao_sistemas{width: 13%; margin-left: 12%;}
-.img_prototipo{width: 13%; margin-left: 12%;}
+
+//Are da mensagem
+.area_msg{
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    //margin: 10px;
+    margin-top: 5%;
+    padding: 10px 5px;
+    position: relative;
+    border-radius: 10px;
+    text-align: center;
+    //margin-top: 20px;
+    background-color:#B1B1B1;
+}
+
+//Area da Imagem
+#area_criacao_de_sites{
+    position: absolute;
+    width: 160px;
+    height: 190px;
+    display: inline-block;
+    left: -10%;
+    //float: left;
+//    background-color: rgb(0, 195, 255);
+}
+
+.img_criacao_sites{margin-left: 7%; width: 75%;}
+
+
+#area_criacao_de_loja{
+    position: absolute;
+    width: 150px;
+    left: 20%;
+    height: 190px;
+    margin-top: 4px;
+    //display: inline-block;
+    //float: left;
+    //background-color: red;
+}
+
+.img_criacao_loja{width: 40%; margin-left: 12%;}
+
+
+#area_criacao_de_sistemas{
+    //display: inline-block;
+    position: absolute;
+    width: 200px;
+    height: 190px;
+    left: 45%;
+    //background-color: red;
+}
+
+.img_criacao_sistemas{width: 50%; margin-left: 12%;}
+
+
+#area_prototipo{
+    position: absolute;
+    width: 150px;
+    left: 80%;
+    height: 190px;
+    margin-top: 4px;
+  //  background-color: #b6dd09;
+}
+
+.img_prototipo{width: 60%; margin-left: 12%;}
+
 
 
 .btn_saiba_mais{

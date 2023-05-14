@@ -26,30 +26,52 @@
     </div>
 
     <div id="Area_Solucoes">
+
       <h1 class="h1_servicos">Serviços e soluções</h1>
 
       <div class="Area_img_solucoes">
       
-        <div>
-          <img  class="img_criacao_sites"  src="../assets/img/img_sites.png"  v-on:mouseover="exibirMensagem" v-on:mouseout="Limparmensagem"/>
-          <p>{{ mensagem.msg_site }}</p>
-          <!-- <h4>Criação de Sites</h4>-->
+        <div id="area_criacao_de_sites">
+
+          <img  class="img_criacao_sites"  src="../assets/img/img_sites.png"  v-on:mouseover="exibirMensagem" v-on:mouseout="Limparmensagem">
+
+          <div class="area_msg" v-if="mensagem.msg_site">
+            <p>{{ mensagem.msg_site }}</p>
+          </div>
+
         </div>
        
-        <div>
-          <img  class="img_criacao_loja"  src="../assets/img/e-commerce.png" v-on:mouseover="exibirMensagem" v-on:mouseout="Limparmensagem"/>
-          <p>{{  mensagem.msg_loja }}</p>
-        <!-- <h4>Criação de Lojas virtuais</h4> -->
-        </div>
+        <div id="area_criacao_de_loja">
+          <img  class="img_criacao_loja"  src="../assets/img/e-commerce.png" v-on:mouseover="exibirMensagem_Loja" v-on:mouseout="Limparmensagem"> 
+
+          <div class="area_msg" v-if="mensagem.msg_loja">
+            <p>{{ mensagem.msg_loja }}</p>
+          </div>
         
-        <img  class="img_criacao_sistemas"  src="../assets/img/sistema-web.png" />
-        <!-- <h4>Criação de Sistemas Web</h4> -->
-        <img  class="img_prototipo"  src="../assets/img/prototipagem.png" />
-        <!-- <h4>Prototipagem</h4>  -->
+        </div>
+       
+        <div id="area_criacao_de_sistemas">
+          <img  class="img_criacao_sistemas"  src="../assets/img/sistema-web.png" v-on:mouseover="exibirMensagem_Sistema" v-on:mouseout="Limparmensagem">
+
+          <div class="area_msg" v-if="mensagem.msg_sistema">
+            <p>{{ mensagem.msg_sistema }}</p>
+          </div>
+
+        </div>
+
+        <div id="area_prototipo">
+          <img  class="img_prototipo"  src="../assets/img/prototipagem.png" v-on:mouseover="exibirMensagemPrototipo" v-on:mouseout="Limparmensagem"/>
+
+          <div class="area_msg" v-if="mensagem.msg_prototipo">
+            <p>{{ mensagem.msg_prototipo }}</p>
+          </div>
+
+        </div>
+
       </div>
-      <!-- <ul>
-        <li><a class="btn_saiba_mais" :key="link_btn.id" v-click="$emit('handleClick') >{{ link_btn.text }}</a></li>
-      </ul> -->
+
+      <button  class="btn_saiba_mais" v-for="link in links" :href="link.url" :key="link.id" @click="handleClick">{{ link.text }}</button>
+      
 
     </div>
 
@@ -78,6 +100,7 @@
   import Menu from './Menu.vue'
   import rodape from './rodape.vue'
   import Contato from './Contato/Contato.vue'
+  //import { handleClick } from './Menu.vue'
 // import { createElement } from 'react/cjs/react.production.min'
 
 
@@ -91,16 +114,15 @@
 
     data(){
       return{
-        mensagem:[
-          {msg_site: ''},
-          {msg_loja: ''}
-        ],
         mes: null,
-        imagens:[
-          { caminho: '../assets/img/img_sites.png', exibirBalao: false, textoBalao: 'Criação de Sites' },
-          { caminho: '../assets/img/e-commerce.png', exibirBalao: false, textoBalao: 'Criação de Lojas Virtuais' },
-          { caminho: '../assets/img/sistema-web.png', exibirBalao: false, textoBalao: 'Criação de Sistemas Web' },
-          { caminho: '../assets/img/prototipagem.png', exibirBalao: false, textoBalao: 'Prototipagem' },
+        mensagem:{
+          msg_site:'',
+          msg_loja:'',
+          msg_sistema: '',
+          msg_prototipo: ''
+        },
+        links: [
+            { id: 4, text: 'Saiba Mais', url: '#Contato' },
         ]
       }
     },
@@ -144,12 +166,45 @@
 
 
         exibirMensagem(){
+          this.Limparmensagem();
           this.mensagem.msg_site = "Criação de Sites"
-          this.mensagem.msg_loja = "Criação de lojas Virtuais"
+        },
+
+        exibirMensagem_Loja(){
+          this.Limparmensagem();
+          this.mensagem.msg_loja = "Criação de Lojas Virtuais"
+        },
+
+        exibirMensagem_Sistema(){
+          this.Limparmensagem();
+          this.mensagem.msg_sistema = "Criação de Sistemas"
+        },
+
+        exibirMensagemPrototipo(){
+          this.Limparmensagem();
+          this.mensagem.msg_prototipo = "Criação de Prototipo"
         },
 
         Limparmensagem(){
-          this.mensagem = ''
+          
+          this.mensagem.msg_site = ''
+          this.mensagem.msg_loja = '' 
+          this.mensagem.msg_sistema = ''
+          this.mensagem.msg_prototipo = ''
+
+        },
+
+        handleClick(e){
+
+          e.preventDefault()
+          const target = e.target.getAttribute('href')
+          const location = document.querySelector(target).offsetTop
+
+          window.scrollTo({
+              left: 0,
+              top: location - -70,
+          })
+
         }
       
       
