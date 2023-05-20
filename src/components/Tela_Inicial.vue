@@ -35,7 +35,7 @@
 
           <img  class="img_criacao_sites"  src="../assets/img/img_sites.png"  v-on:mouseover="exibirMensagem" v-on:mouseout="Limparmensagem">
 
-          <div class="area_msg" v-if="mensagem.msg_site">
+          <div class="area_msg_site" v-if="mensagem.msg_site">
             <p>{{ mensagem.msg_site }}</p>
           </div>
 
@@ -80,8 +80,35 @@
       <h1 class="h1_skills">Minhas Skills e Power up's</h1>
 
       <div class="Info_Ocu_Skills">
+              <h1 class="img_ux_ui" style="
+              font-family: 'Inter', sans-serif; 
+              font-size: 25px;
+              margin-top: 48%;
+              margin-left: 18%; ">UX\UI</h1>
 
+              <img src="../assets/img/sass.png"  class="img_sass"/>
+              <!-- <p>Sass</p> -->
+               
+              <img src="../assets/img/react.png"  class="img_react"/>
+              <!-- <p>React</p> -->
+
+              <img src="../assets/img/python.png"  class="img_python"/>
+              <!-- <p>Python</p> -->
+              
+              <img src="../assets/img/vue.com.png"  class="img_vue_js"/>
+              <!-- <p>VueJS</p> -->
+              
       </div>
+
+      <img src="../assets/img/rails.png" class="rails" />
+      <!-- <p>Ruby on Rails</p> -->
+
+      <img src="../assets/img/php.png"  class="img_php"/>
+      <!-- <p>PHP</p> -->
+
+      <img src="../assets/img/docker.png"  class="img_docker"/>
+      <!-- <p>Docker</p> -->
+
     </div>
 
     <div id="Contato">

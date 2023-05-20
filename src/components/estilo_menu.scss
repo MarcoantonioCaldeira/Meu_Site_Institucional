@@ -6,37 +6,53 @@
   
 header {
     background-color: #0C0C0C;
+    //background-color:aqua ;
     height: 90px;
-    z-index: 209;
+    //z-index: 209;
     width: 100%;
-    //margin-top: ;
+    margin-top: -17px;
     transition: 0.5s ease all;
+
+    a{
+      color: #CECECE;
+      text-decoration: none;
+      cursor: pointer;
+      margin-left: 46px;
+      font-size: 20px;
+      font-family: 'Inter', sans-serif;
+      display: inline;
+    }
   
     nav {
+    //background-color: blue;
     text-decoration: none;
     position: relative;
+    flex-direction: row;
+    //right: 135px;
     display: flex;
     padding: 13px 0;
     transition: 0.5s ease all;
-    width: 80%;
+    width:100%;
     margin: 0 auto;
   
     ul,.link {
       font-weight: 500;
-      color: #fff;
+      //color: #d34b4b;
       list-style: none;
       text-decoration: none;
     }
   
     @media (min-width:71.25em) {
         max-width: 71.25em;
+
+     
     }
   
-        ul .link{
+        ul, .link{
           text-decoration: none;
           margin-left: 10px;
-          color:#e2e2e2;
-          font-family:  'Inter', sans-serif;
+          // //color:#ca4949;
+          // font-family:  'Inter', sans-serif;
           padding: 0.5em;
           font-weight: 800;
         }
@@ -53,6 +69,11 @@ header {
           ul{
             margin-top: -3%;
           }
+
+          .img_github, .img_linkedin{
+            display: none;
+          }
+  
           
         }
         .link {
@@ -70,8 +91,10 @@ header {
   
       .navigation{
         display: flex;
+        //background-color: red;
         align-items: center;
-        margin-left: 100px;
+        margin-top: 25px;
+        //margin-left: 10px;
         //flex: 1;
         justify-content: flex-end;
       }
@@ -90,7 +113,7 @@ header {
           color: rgb(216, 15, 15);
           cursor: pointer;
           font-size: 24px;
-          transition: 0.8s ease all;
+          transition: 0.2s ease all;
         }
       }
   
@@ -106,14 +129,17 @@ header {
         width: 100%;
         max-width: 250px;
         height: 100%;
-        background-color: #002b38;
+        background-color: #fff;
         top: 0;
-        left: 0;
+        left: -9px;
+
+        
            
-        li{
+        a{
           text-decoration: none !important;
-          font-family: 'Poppins' !important;
-          color: red;
+          display: block;
+          font-family:  'Inter', sans-serif;
+          color: #CECECE;
           .link{
             color: white;
           }
