@@ -5,8 +5,8 @@
   
   
 header {
-    background-color: #0C0C0C;
-    //background-color:aqua ;
+    //background-color: #0C0C0C;
+    background-color:aqua ;
     height: 90px;
     //z-index: 209;
     width: 100%;
@@ -42,8 +42,8 @@ header {
       text-decoration: none;
     }
   
-    @media (min-width:71.25em) {
-        max-width: 71.25em;
+    @media (min-width:1140px) {
+        max-width: 1140px;
 
      
     }
@@ -64,7 +64,7 @@ header {
           margin-left: 10px;
         }
   
-        @media only screen and (max-width: 54em) {
+        @media only screen and (max-width: 864px) {
   
           ul{
             margin-top: -3%;
@@ -116,10 +116,7 @@ header {
           transition: 0.2s ease all;
         }
       }
-  
-      .icon-active{
 
-      }
   
       .dropdown-nav{
         z-index: 200;
