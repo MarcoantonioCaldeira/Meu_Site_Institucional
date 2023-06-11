@@ -9,6 +9,8 @@
       estou cursando Tecnologia em Sistemas para a
       internet <br>no IFSP. Sou muito criativo e gosto de estar
       sempre em  <br>constante evolução, criando novas soluções para as pessoas</h4>
+
+      <img src="../assets/img/foto_perfil.png" style="width: 21%; margin-left: 74%;"/>
     </div>
     <!-- Div que eu quero mudar -->
     <div id="Info_Ocu">
@@ -21,7 +23,7 @@
           
 
         <div class="Info_Ocu_di">
-
+          <!-- <h1 class="h1_ocupacao">Projetos desenvolvidos</h1> -->
         </div>
     </div>
 

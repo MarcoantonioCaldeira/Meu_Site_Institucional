@@ -3,7 +3,6 @@
   <header :class="{ 'scrolled-nav': scrolledNav }">
 
     <nav>
-
       <a target="_blank" href="https://www.linkedin.com/in/marco-antonio-caldeira-97548616a/"><img class="img_linkedin"  src="../assets/img/linkedin.png" /></a>  
       <a target="_blank" href="https://github.com/MarcoantonioCaldeira"><img class="img_github"  src="../assets/img/github.png" /></a>
       <ul v-show="!mobile" class="navigation">
@@ -22,6 +21,7 @@
           <li><a v-for="link in links" :href="link.url" :key="link.id" @click="handleClick">{{ link.text }}</a></li>
         </ul>
       </transition>
+
     </nav>
 
 </header>
