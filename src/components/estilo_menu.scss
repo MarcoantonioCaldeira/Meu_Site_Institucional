@@ -21,6 +21,29 @@ header {
       font-size: 20px;
       font-family: 'Inter', sans-serif;
       display: inline;
+
+    }
+
+
+    /* CSS */
+    .navigation li a {
+      position: relative;
+    }
+
+    .navigation li a::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 100%;
+      height: 2px;
+      background-color: #CECECE; /* Cor do sublinhado */
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    .navigation li:hover a::before {
+      transform: scaleX(1);
     }
   
     nav {
@@ -70,7 +93,7 @@ header {
             margin-top: -3%;
           }
 
-          .img_github, .img_linkedin{
+          .icons{
             display: none;
           }
   
@@ -110,7 +133,7 @@ header {
         height: 90px;
   
         i {
-          color: rgb(216, 15, 15);
+          color: #CECECE;
           cursor: pointer;
           font-size: 24px;
           transition: 0.2s ease all;
@@ -124,9 +147,10 @@ header {
         flex-direction: column;
         position: fixed;
         width: 100%;
+        margin: 0;
         max-width: 250px;
         height: 100%;
-        background-color: #fff;
+        background-color: #363434;
         top: 0;
         left: -9px;
 
@@ -141,6 +165,21 @@ header {
             color: white;
           }
         }
+
+        &.mobile-nav {
+          li {
+            display: flex;
+            align-items: center;
+      
+            .img_linkedin,
+            .img_github {
+              height: 30px;
+              width: auto;
+              margin-right: 10px;
+            }
+          }         
+        }
+        
       }
   
       .mobile-nav-enter-active,.mobile-nav-leave-active{

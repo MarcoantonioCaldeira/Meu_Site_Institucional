@@ -5,12 +5,12 @@
     <div id="tamplate">
       <h1 class="h1_Sauda_Nome">Olá, me chamo <br>Marco Antonio!!!</h1>
 
-      <h4 class="h3_Intro">Sou Desenvolvedor Web Front-End. Atualmente<br> 
+      <h4 class="h3_Intro">Sou Desenvolvedor Front-End. Atualmente<br> 
       estou cursando Tecnologia em Sistemas para a
-      internet <br>no IFSP. Sou muito criativo e gosto de estar
-      sempre em  <br>constante evolução, criando novas soluções para as pessoas</h4>
+      internet <br>no IFSP. Sou apaixonado por criatividade e busco estar em 
+      <br>constante evolução, sempre criando soluções inovadoras <br>para as pessoas</h4>
 
-      <img src="../assets/img/foto_perfil.png" style="width: 21%; margin-left: 74%;"/>
+      <img  class="foto_perfil"  src="../assets/img/foto_perfil.png" />
     </div>
     <!-- Div que eu quero mudar -->
     <div id="Info_Ocu">

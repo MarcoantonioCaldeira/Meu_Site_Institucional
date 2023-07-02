@@ -10,7 +10,6 @@ html {
 }
 
 
-
 .img_linkedin{
     position: absolute;
     left: 93%;
@@ -47,6 +46,11 @@ html {
     margin-left: 50px;
     margin-top: 13%;
     font-size: 20px;
+}
+
+.foto_perfil{
+    width: 21%;
+    margin-left: 70%;
 }
 
 .mudar_estilo{
@@ -258,25 +262,25 @@ html {
 
 .img_sass{
     width: 24%;
+    position: relative;
     // min-width: 100px;
     // max-width: 100px;
     margin-left: 233px;
     margin-top: 20px;
-    transform: translatey(0px);
-    animation: float 5s ease-in-out infinite;
+    animation: floating-animation 4s infinite;
 }
 
-@keyframes float{
-    0%{
-        transform: translatey(0px);
-    }
-    50%{
-        transform: translatey(-10px);
-    }
-    100%{
-        transform: translatey(0px);
-    }
-}
+// @keyframes floating-animation{
+//     0% {
+//         transform: translate3d(0, 0, 0) scale(1);
+//       }
+//       50% {
+//         transform: translate3d(-10px, -10px, 0) scale(1.1);
+//       }
+//       100% {
+//         transform: translate3d(0, 0, 0) scale(1);
+//       }
+// }
 
 // .img_sass:hover {
 //     transform: scale(1.1);
@@ -393,17 +397,176 @@ html {
 }
 
 
-@media (max-width:25em){
+@media (max-width: 767px) {
+    // Insira aqui as regras de estilo para dispositivos móveis
 
 
-#tamplate{
-    width: 100%;
-    height: 750px;
-    background-color: #eb1010;
-}
+    *{
+        background-color: red;
+    }
+  }
+  
+  // Estilos para dispositivos médios (tablets)
+  @media (min-width: 768px) and (max-width: 1023px) {
+    // Insira aqui as regras de estilo para tablets
 
-.Info_Ocu_di{
-    display: none;
-}
+    .h1_Sauda_Nome{     
+        margin-left: 50px;
+        top: 22%;
+        font-size: 40px;
+    }
+    
+    .h3_Intro{
+        margin-left: 50px;
+        margin-top: 20%;
+        font-size: 15px;
+    }
 
-}
+    .foto_perfil{
+        margin-top: 70px;
+        margin-left: 70%;
+    }
+
+    #Info_Ocu{
+        width: 100%;
+        height: 500px;
+        background-color: #e2e2e2;
+    }
+    
+    .h1_ocupacao{
+        font-size: 40px;
+    }
+    
+    .h3_cargo{
+        font-size: 16px;
+    }
+    
+    
+    .h3_nome_empresa{
+        font-size: 20px;
+    }
+    
+    .icon_ocu{
+        width: 7%;
+        margin-left: 50px; 
+        margin-top: 17%;  
+    }
+    
+    .Info_Ocu_di{
+        width: 450px;
+        height: 500px;
+        background-color: #CECECE;
+    }
+
+
+    #Area_Solucoes{
+        width: 100%;
+        height: 550px;
+        background-color: #0C0C0C;
+    }
+    
+    .Area_img_solucoes{
+        position:absolute;
+        margin-top: 15%;
+        margin-left: 25%;
+        width: 700px;
+        height: 100px;
+        // background-color: red;
+    }
+    
+    .h1_servicos{
+        font-size: 40px;
+    }
+    
+    //Are da mensagem
+    .area_msg{
+        font-size: 10px;
+        padding: 8px 4px;
+    }
+
+    //Area da Imagem
+    #area_criacao_de_sites{
+        width: 160px;
+        height: 190px;
+        left: -10%;
+    }
+    
+    .img_criacao_sites{margin-left: 7%; width: 65%;  transition: 0.8s ease all;}
+    
+    
+    #area_criacao_de_loja{
+        width: 150px;
+        left: 18%;
+        height: 190px;
+  
+    }
+    
+    .img_criacao_loja{width: 35%; margin-left: 12%;}
+    
+    
+    #area_criacao_de_sistemas{
+        width: 200px;
+        height: 190px;
+        left: 43%;
+       
+    }
+    
+    .img_criacao_sistemas{width: 40%; margin-left: 12%;}
+    
+    
+    #area_prototipo{
+        width: 150px;
+        left: 70%;
+        height: 190px;
+        margin-top: 4px;
+    }
+    
+    .img_prototipo{width: 50%; margin-left: 12%;}
+    
+    
+    
+    .btn_saiba_mais{
+      margin-top: 20%;
+      border: none;
+      margin-top: 33%;
+      left: 42%;
+      color: #dad8d8;
+      padding: 16px 65px;
+    }
+
+    #Skills{
+        height: 650px;
+    }
+
+    
+    .rails{
+        width: 9%;
+        margin-left: 100px;
+        margin-top: 35%;
+    }
+
+    
+    .h1_skills{
+        position: absolute;
+        font-size: 45px;
+        margin-left: 26%;
+        margin-top: 7%;
+        font-family: 'Inter', sans-serif;
+    }
+    
+    .Info_Ocu_Skills{
+        width: 500px;
+        float: left;
+        height: 650px;
+        background-color: #CECECE;
+    }
+
+
+
+  }
+  
+  // Estilos para dispositivos grandes (desktops)
+  @media (min-width: 1024px) {
+    // Insira aqui as regras de estilo para desktops
+
+  }

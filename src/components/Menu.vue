@@ -3,23 +3,33 @@
   <header :class="{ 'scrolled-nav': scrolledNav }">
 
     <nav>
-      <a target="_blank" href="https://www.linkedin.com/in/marco-antonio-caldeira-97548616a/"><img class="img_linkedin"  src="../assets/img/linkedin.png" /></a>  
-      <a target="_blank" href="https://github.com/MarcoantonioCaldeira"><img class="img_github"  src="../assets/img/github.png" /></a>
+      <div class="icons">
+        <a target="_blank" href="https://www.linkedin.com/in/marco-antonio-caldeira-97548616a/"><img class="img_linkedin"  src="../assets/img/linkedin.png" /></a>  
+        <a target="_blank" href="https://github.com/MarcoantonioCaldeira"><img class="img_github"  src="../assets/img/github.png" /></a>
+      </div>
+     
       <ul v-show="!mobile" class="navigation">
-        <li><a v-for="link in links" :href="link.url" :key="link.id" @click="handleClick">{{ link.text }}</a></li>
+        <li v-for="link in links" :key="link.id" @mouseover="hoveredItem = link.id" @mouseout="hoveredItem = null" :class="{ 'hovered': hoveredItem === link.id }">
+          <a  :href="link.url" @click="handleClick">{{ link.text }}</a>
+        </li>
       </ul>
 
       <div class="icon">
         <span  v-show="mobile" @click="toggleMobileNav" >
           <i class="fa-solid fa-bars" :class="{ 'icon-active': mobileNav}"></i>
         </span> 
-        <!-- <button @click="toggleMobileNav" v-show="mobile">Clique aqui</button> -->
       </div>
 
       <transition name="mobile-nav">
         <ul v-show="mobileNav" class="dropdown-nav">
-          <li><a v-for="link in links" :href="link.url" :key="link.id" @click="handleClick">{{ link.text }}</a></li>
-        </ul>
+        <li>
+          <a v-for="link in links" :href="link.url" :key="link.id" @click="handleClick">
+            <img v-if="link.id === 'linkedin'" class="img_linkedin" src="../assets/img/linkedin.png" style="height: 30px; width: auto; margin-left: -170px; margin-top: 470px;"/>
+            <img v-if="link.id === 'github'" class="img_github" src="../assets/img/github.png" style="height: 30px; width: auto; margin-left: -120px; margin-top: 470px;"/>
+            <span v-if="link.id !== 'linkedin' && link.id !== 'github'">{{ link.text }}</span>
+          </a>
+        </li>
+      </ul>
       </transition>
 
     </nav>
@@ -40,11 +50,14 @@ export default {
           mobile: null,
           mobileNav: null,
           windowWidth: null,
+          hoveredItem: null,
 
           links: [
             { id: 1, text: 'Inicio', url: '#tamplate' },
             { id: 2, text: 'Serviços', url: '#Area_Solucoes' },
             { id: 3, text: 'Contato', url: '#Contato' },
+            {id: 'linkedin'},
+            {id: 'github'}
           ],
         }
     },
@@ -100,6 +113,6 @@ export default {
 }
 
 </script>
-<style lang="scss" src="./estilo_menu.scss">
+<style lang="scss" src="./estilo_menu.scss" scoped>
 
 </style>
