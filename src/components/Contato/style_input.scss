@@ -62,7 +62,7 @@ form{
   background-color:black;
   border: none;
   margin-top: 60px;
-  left: 40%;
+  left: 45%;
   color: #dad8d8;
   padding: 16px 72px;
   font-family: 'Inter', sans-serif;
@@ -71,3 +71,50 @@ form{
   cursor: pointer;
 }
 
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+  .input_nome{
+    width: 280px;
+    height: 35px;
+  }
+
+  .input_sobrenome{
+      width: 185px;
+      height: 35px;
+  }
+
+  .input_telefone{
+      margin-left: 27%  !important;
+      width: 150px;
+      height: 35px;
+  }
+
+  .input_email{
+      width: 300px;
+  }
+
+  #text_area{
+    width: 544px;
+    height: 200px;
+  }
+
+}
+
+
+  //Estilo para Telas maiores
+  @media (min-width: 1400px){
+
+    .btn_enviar{
+   
+      left: 45%;
+      color: #dad8d8;
+      padding: 16px 72px;
+      font-family: 'Inter', sans-serif;
+      text-decoration: none;
+      /* margin: 4px 2px; */
+      cursor: pointer;
+    }
+
+    
+  }

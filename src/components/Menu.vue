@@ -3,16 +3,27 @@
   <header :class="{ 'scrolled-nav': scrolledNav }">
 
     <nav>
+    
+      <div id="logo">
+        <img src="../assets/img/logo.png" style="   position: absolute; width: 5%; margin-top: 27px; margin-left: -40px;"/>
+      </div>
       <div class="icons">
         <a target="_blank" href="https://www.linkedin.com/in/marco-antonio-caldeira-97548616a/"><img class="img_linkedin"  src="../assets/img/linkedin.png" /></a>  
         <a target="_blank" href="https://github.com/MarcoantonioCaldeira"><img class="img_github"  src="../assets/img/github.png" /></a>
       </div>
-     
+
+      <!-- <li>
+        <select  change="mudar_idioma"   v-model="idiomaSelecionado" style="position: absolute; left: 105%;">
+          <option v-for="lang in idiomas" :key="lang" :value="lang">{{ $t(`language.${lang}`) }}</option>
+        </select>
+      </li> -->
+      
       <ul v-show="!mobile" class="navigation">
         <li v-for="link in links" :key="link.id" @mouseover="hoveredItem = link.id" @mouseout="hoveredItem = null" :class="{ 'hovered': hoveredItem === link.id }">
           <a  :href="link.url" @click="handleClick">{{ link.text }}</a>
         </li>
       </ul>
+      
 
       <div class="icon">
         <span  v-show="mobile" @click="toggleMobileNav" >
@@ -40,7 +51,7 @@
 
 <script>
 import '@fortawesome/fontawesome-free/css/all.css'
-
+import VueI18n from 'vue-i18n';
 
 export default {
     name: 'Menu',
@@ -51,6 +62,8 @@ export default {
           mobileNav: null,
           windowWidth: null,
           hoveredItem: null,
+          idiomas: ['pt', 'en'],
+          idiomaSelecionado: 'en',
 
           links: [
             { id: 1, text: 'Inicio', url: '#tamplate' },
@@ -72,6 +85,11 @@ export default {
     }, 
 
     methods:{
+
+      mudar_idioma(){
+        this.$i18n.locale = this.idiomaSelecionado;
+      },
+
       handleClick(e){
 
           e.preventDefault()

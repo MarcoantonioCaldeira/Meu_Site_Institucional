@@ -5,10 +5,10 @@
     <div id="tamplate">
       <h1 class="h1_Sauda_Nome">Olá, me chamo <br>Marco Antonio!!!</h1>
 
-      <h4 class="h3_Intro">Sou Desenvolvedor Front-End. Atualmente<br> 
+      <h4 class="h3_Intro">"Sou Desenvolvedor Front-End. Atualmente<br> 
       estou cursando Tecnologia em Sistemas para a
       internet <br>no IFSP. Sou apaixonado por criatividade e busco estar em 
-      <br>constante evolução, sempre criando soluções inovadoras <br>para as pessoas</h4>
+      <br>constante evolução, sempre criando soluções inovadoras <br>para as pessoas"</h4>
 
       <img  class="foto_perfil"  src="../assets/img/foto_perfil.png" />
     </div>
@@ -87,6 +87,9 @@
               font-size: 25px;
               margin-top: 48%;
               margin-left: 18%; ">UX\UI</h1>
+
+              <img src="../assets/img/WordPress.png"  class="img_wordpress"/>
+              <!-- <p>Sass</p> -->
 
               <img src="../assets/img/sass.png"  class="img_sass"/>
               <!-- <p>Sass</p> -->
