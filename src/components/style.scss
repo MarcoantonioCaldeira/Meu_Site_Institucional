@@ -91,6 +91,7 @@ html {
     position: absolute;
     margin-top: 25%;
     margin-left: -20%;
+    text-decoration:underline;
     display: inline-block;
     /* margin-left: 50px; */
 }
@@ -760,6 +761,48 @@ html {
   //Estilo para Telas maiores
   @media (min-width: 1400px){
 
+    #tamplate{
+        width: 100%;
+        height: 1050px;
+        background-color: #0C0C0C;
+    }
+
+
+    .foto_perfil{
+        width: 17%;
+        //margin-left: -10px;
+    }
+
+
+    .img_linkedin{
+        position: absolute;
+        left: 86%;
+        padding-top: 37px;
+        width: 2.5%;
+    }
+    
+    .img_github{
+        position: absolute;
+        left: 93%;
+        padding-top: 37px;
+        width: 2.5%;
+    }
+
+
+    #Info_Ocu{
+        height: 900px;
+    }
+
+    .Info_Ocu_di{
+        height: 900px;
+        width: 50%;
+    }
+
+    .h3_nome_empresa{
+        margin-left: -300px;
+    }
+
+
     #Area_Solucoes{
         height: 900px;
     }
@@ -869,7 +912,7 @@ html {
 
 
     #area_inputs{
-        margin-left: 390px;
+        margin-left: 360px;
         margin-top: 7%;
     }
 
@@ -878,5 +921,16 @@ html {
         margin-top: 5%;
     }
 
+
+    .img_linkedin_rodape{
+        left: 83%;
+        width: 2.5%;
+    }
+
+
+    .img_github_rodape{
+        left: 89%;
+        width: 2.5%;
+    }
 
   }
