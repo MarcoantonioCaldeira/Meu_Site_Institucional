@@ -72,7 +72,8 @@
 
       </div>
 
-      <button  class="btn_saiba_mais" v-for="link in links" :href="link.url" :key="link.id" @click="handleClick">{{ link.text }}</button>
+      <button class="btn_saiba_mais" v-for="link in links" :key="link.id" @click="handleClick(link)">{{ link.text }}</button>
+
       
 
     </div>
@@ -124,6 +125,10 @@
         <Contato />
       </div>
 
+      <div  class="btn_voltar_topo" v-for="link in links" :href="link.url" :key="link.id" @click="handleClick" >
+        {{ link.url }}
+        <i class="fa-solid fa-angle-up fa-2xl"></i>
+      </div>
     </div>
     <rodape />
 </template>
@@ -132,6 +137,7 @@
   import Menu from './Menu.vue'
   import rodape from './rodape.vue'
   import Contato from './Contato/Contato.vue'
+  import '@fortawesome/fontawesome-free/css/all.css'
   //import { handleClick } from './Menu.vue'
 // import { createElement } from 'react/cjs/react.production.min'
 
@@ -151,10 +157,12 @@
           msg_site:'',
           msg_loja:'',
           msg_sistema: '',
+          hoveredItem: null,
           msg_prototipo: ''
         },
         links: [
             { id: 4, text: 'Saiba Mais', url: '#Contato' },
+//{ id: 5, text: '', url: '#tamplate' },
         ]
       }
     },
@@ -226,21 +234,35 @@
 
         },
 
-        handleClick(e){
-
-          e.preventDefault()
-          const target = e.target.getAttribute('href')
-          const location = document.querySelector(target).offsetTop
-
-          window.scrollTo({
-              left: 0,
-              top: location - -70,
-          })
-
+        handleClick(link) {
+          if (link.url === '#Contato') {
+            // Rolar suavemente para a seção de Contato
+            const contactSection = document.querySelector(link.url);
+            if (contactSection) {
+              window.scrollTo({
+                top: contactSection.offsetTop,
+                behavior: 'smooth'
+              });
+            }
+          } else if (link.url === '#tamplate') {
+            // Rolar suavemente para a seção de Tamplate
+            const templateSection = document.querySelector(link.url);
+            if (templateSection) {
+              window.scrollTo({
+                top: templateSection.offsetTop,
+                behavior: 'smooth'
+              });
+            }
+          } else {
+            // Rolar suavemente para o topo da página
+            window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+            });
+          }
         }
-      
-      
-    }
+      }
+       
   }
 
 </script>

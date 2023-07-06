@@ -341,6 +341,30 @@ html {
     background-color: #0C0C0C;
 }
 
+.btn_voltar_topo{
+    position: absolute;
+    background-color:black;
+    margin-top: 20%;
+    border: none;
+    margin-top: 33%;
+    left: 42%;
+    color: black;
+    width: 7%;
+    height: 70px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .btn_voltar_topo{
+    margin-left: 46%;
+    margin-top: 58%;
+  }
+
+  .btn_voltar_topo i{
+    color: white; margin-left: 32px;
+  }
+
 #area_inputs{
     ///position: center;
     //background-color: red;
@@ -932,5 +956,18 @@ html {
         left: 89%;
         width: 2.5%;
     }
+
+
+    .btn_voltar_topo{
+        margin-left: 46%;
+        margin-top: 43%;
+      }
+    
+      .btn_voltar_topo i{
+        color: white; 
+        margin-left: -10px;
+        margin-top: 30px;
+      }
+    
 
   }
