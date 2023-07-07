@@ -78,41 +78,37 @@
 
     </div>
 
-    <div id="Skills">
+    <div id="Skills" @mousemove="updateMousePosition">
 
       <h1 class="h1_skills">Minhas Skills e Power up's</h1>
 
       <div class="Info_Ocu_Skills">
-              <h1 class="img_ux_ui" style="
-              font-family: 'Inter', sans-serif; 
-              font-size: 25px;
-              margin-top: 48%;
-              margin-left: 18%; ">UX\UI</h1>
+              <h1 class="img_ux_ui" :style="{ '--mouseX': mouseX + 'px' }" >UX\UI</h1>
 
-              <img src="../assets/img/WordPress.png"  class="img_wordpress"/>
+              <img src="../assets/img/WordPress.png"  class="img_wordpress"  :style="{ '--mouseX': mouseX + 'px' }" />
               <!-- <p>Sass</p> -->
 
-              <img src="../assets/img/sass.png"  class="img_sass"/>
+              <img src="../assets/img/sass.png"  class="img_sass"  :style="{ '--mouseX': mouseX + 'px' }" />
               <!-- <p>Sass</p> -->
                
-              <img src="../assets/img/react.png"  class="img_react"/>
+              <img src="../assets/img/react.png"  class="img_react"  :style="{ '--mouseX': mouseX + 'px' }" />
               <!-- <p>React</p> -->
 
-              <img src="../assets/img/python.png"  class="img_python"/>
+              <img src="../assets/img/python.png"  class="img_python"  :style="{ '--mouseX': mouseX + 'px' }" />
               <!-- <p>Python</p> -->
               
-              <img src="../assets/img/vue.com.png"  class="img_vue_js"/>
+              <img src="../assets/img/vue.com.png"  class="img_vue_js"  :style="{ '--mouseX': mouseX + 'px' }" />
               <!-- <p>VueJS</p> -->
               
       </div>
 
-      <img src="../assets/img/rails.png" class="rails" />
+      <img src="../assets/img/rails.png" class="rails"  :style="{ '--mouseX': mouseX + 'px' }"  />
       <!-- <p>Ruby on Rails</p> -->
 
-      <img src="../assets/img/php.png"  class="img_php"/>
+      <img src="../assets/img/php.png"  class="img_php"  :style="{ '--mouseX': mouseX + 'px' }" />
       <!-- <p>PHP</p> -->
 
-      <img src="../assets/img/docker.png"  class="img_docker"/>
+      <img src="../assets/img/docker.png"  class="img_docker"  :style="{ '--mouseX': mouseX + 'px' }" />
       <!-- <p>Docker</p> -->
 
     </div>
@@ -153,16 +149,17 @@
     data(){
       return{
         mes: null,
+        mouseX: 0,
         mensagem:{
           msg_site:'',
           msg_loja:'',
           msg_sistema: '',
           hoveredItem: null,
-          msg_prototipo: ''
+          msg_prototipo: '',
         },
         links: [
             { id: 4, text: 'Saiba Mais', url: '#Contato' },
-//{ id: 5, text: '', url: '#tamplate' },
+            //{ id: 5, text: '', url: '#tamplate' },
         ]
       }
     },
@@ -186,6 +183,10 @@
         //     }
         //   })
         // },
+
+        updateMousePosition(event) {
+          this.mouseX = event.clientX;
+        },
 
         topFunction(){
 

@@ -261,6 +261,13 @@ html {
     background-color: white;
 }
 
+.img_ux_ui{
+    font-family: 'Inter', sans-serif; 
+    font-size: 25px;
+    margin-top: 48%;
+    margin-left: 18%;
+}
+
 .img_wordpress{
     width: 10%;
     position: relative;
@@ -327,6 +334,42 @@ html {
     margin-top: 7%;
     font-family: 'Inter', sans-serif;
 }
+
+
+#Skills {
+  //display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  //transition: transform 2s ease cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+#Skills:hover .img_ux_ui,
+#Skills:hover .img_wordpress,
+#Skills:hover .img_sass,
+#Skills:hover .img_react,
+#Skills:hover .img_python,
+#Skills:hover .img_vue_js,
+#Skills:hover .rails,
+#Skills:hover .img_php,
+#Skills:hover .img_docker {
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transform: translateX(calc((var(--mouseX) - 50vw) * 0.1));
+    animation-name: floating;
+    //animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+
+@keyframes floating {
+    0%, 100% {
+      transform: translateX(0) translateY(0);
+    }
+    50% {
+      transform: translateX(-5px) translateY(-5px);
+    }
+}
+
+
 
 .Info_Ocu_Skills{
     width: 650px;
@@ -419,7 +462,7 @@ html {
 
 
 //Estilo para celulares
-@media (min-width: 22.938em) and (max-width: 47.938em) {
+@media (min-width: 22.938em) and (max-width: 57.938em) {
         // Insira aqui as regras de estilo para dispositivos móveis
 
     // Insira aqui as regras de estilo para tablets
@@ -597,6 +640,75 @@ html {
         margin-top: 10%;
         font-family: 'Inter', sans-serif;
     }
+
+    .h1_skills{
+        font-size: 23px;
+        margin-left: 23px;
+    }
+
+    .img_wordpress{
+        width: 7%;
+        position: relative;
+        // min-width: 100px;
+        // max-width: 100px;
+        margin-left: 170px;
+        margin-top: 20px;
+    }
+    
+    #Skills, .Info_Ocu_Skills{
+        height: 800px;
+    }
+    
+    .img_sass{
+        width: 22%;
+        position: relative;
+        // min-width: 100px;
+        // max-width: 100px;
+        margin-left: 200px;
+        margin-top: 40px;
+    }
+    
+    
+    .img_python{
+        width: 9%;
+        margin-left: 280px;
+        margin-top: 10px;
+    }
+    
+    .img_react{
+        width: 12%;
+        position: absolute;
+        margin-left: -8px;
+        padding-top: 200px;
+    }
+    
+    .img_vue_js{
+        width: 14%;
+        margin-left: 200px;
+        margin-top: 80px;
+    }
+    
+    .rails{
+        position: absolute;
+        width: 17%;
+        margin-left: -270px;
+        margin-top: 530px;
+    }
+    
+    .img_php{
+        position: absolute;
+        width: 12%;
+        margin-left: -250px;
+        margin-top:600px;
+    }
+    
+    .img_docker{
+        position: absolute;
+        width: 14%;
+        margin-left: -190px;
+        margin-top:650px;
+    }
+
 
   }
   
@@ -787,7 +899,7 @@ html {
 
     #tamplate{
         width: 100%;
-        height: 1050px;
+        height: 900px;
         background-color: #0C0C0C;
     }
 
